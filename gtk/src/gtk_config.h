@@ -106,6 +106,7 @@ class Snes9xConfig
     std::string export_directory;
     std::string last_directory;
     std::string last_shader_directory;
+    std::string screenshot_directory;
 
     /* Controls */
     JoypadBinding pad[NUM_JOYPADS];

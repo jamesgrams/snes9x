@@ -174,19 +174,8 @@ event_key (GtkWidget *widget, GdkEventKey *event, gpointer data)
         return true;
     }
 
-    /* Provide escape key to get out of fullscreen */
     if (event->keyval == GDK_Escape)
     {
-        if (event->type == GDK_KEY_RELEASE)
-        {
-            if (window->config->default_esc_behavior == ESC_EXIT_FULLSCREEN)
-                window->leave_fullscreen_mode ();
-            else if (window->config->default_esc_behavior == ESC_EXIT_SNES9X)
-                S9xExit ();
-            else
-                window->toggle_ui ();
-        }
-
         return true;
     }
 

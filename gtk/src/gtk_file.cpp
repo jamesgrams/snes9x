@@ -160,6 +160,9 @@ S9xGetDirectory (enum s9x_getdirtype dirtype)
             break;
 
         case SCREENSHOT_DIR:
+            sstrncpy (path, gui_config->screenshot_directory.c_str (), PATH_MAX + 1);
+            break;
+
         case SPC_DIR:
             sstrncpy (path, gui_config->export_directory.c_str (), PATH_MAX + 1);
             break;

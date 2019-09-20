@@ -459,6 +459,18 @@ void S9xParseArg (char **argv, int &i, int argc)
     {
         gui_config->mute_sound = true;
     }
+    else if (!strcasecmp (argv[i], "-fullscreen"))
+    {
+        gui_config->fullscreen = true;
+    }
+    else if (!strcasecmp (argv[i], "-sramdir"))
+    {
+	gui_config->sram_directory = argv[++i];
+    }
+    else if (!strcasecmp (argv[i], "-sshotdir"))
+    {
+	gui_config->screenshot_directory = argv[++i];
+    }
 }
 
 static void S9xThrottle ()
